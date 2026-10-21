@@ -25,3 +25,14 @@ class PrediksiProdiApp:
             fg="#2c3e50"
         )
         title_label.pack(pady=(0, 15))
+
+        input_frame = tk.LabelFrame(
+            main_frame, 
+            text=" Input Nilai 10 Mata Pelajaran ", 
+            font=("Arial", 10, "bold"), 
+            bg="#f4f6f9", 
+            fg="#34495e", 
+            padx=15, 
+            pady=10
+        )
+        input_frame.pack(fill=tk.X, pady=(0, 15))
