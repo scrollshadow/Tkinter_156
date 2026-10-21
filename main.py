@@ -94,3 +94,8 @@ class PrediksiProdiApp:
             bg="#2ecc71", 
             fg="white"
         )
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = PrediksiProdiApp(root)
+    root.mainloop()
