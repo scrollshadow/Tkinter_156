@@ -62,14 +62,11 @@ class PrediksiProdiApp:
             font=("Arial", 11, "bold"), 
             bg="#2980b9", 
             fg="white", 
-            activebackground="#1abc9c", 
-            activeforeground="white", 
-            relief=tk.RAISED, 
-            cursor="hand2", 
             command=self.hitung_prediksi
         )
         btn_prediksi.pack(fill=tk.X, pady=(5, 15), ipady=8)
 
+        # 3. Label Luaran Hasil Prediksi (Pastikan menggunakan self.result_label)
         self.result_label = tk.Label(
             main_frame, 
             text="Hasil Prediksi Prodi akan muncul di sini", 
@@ -81,20 +78,27 @@ class PrediksiProdiApp:
         )
         self.result_label.pack(fill=tk.X)
 
-
     def hitung_prediksi(self):
+        # Pastikan ke-10 kotak input terisi semua, jika kosong validasi akan menghentikannya
         for var in self.entry_vars:
             if not var.get().strip():
                 messagebox.showwarning("Peringatan", "Mohon isi semua nilai mata pelajaran terlebih dahulu!")
-            return
+                return
+
+        # Logika teks prediksi prodi
         prodi_hasil = "Teknologi Informasi"
-    
+        
+        # Perintah untuk mengubah teks label luaran saat tombol diklik
         self.result_label.config(
             text=f"Prodi Pilihan Anda: {prodi_hasil}", 
             bg="#2ecc71", 
             fg="white"
         )
 
+        for var in self.entry_vars:
+            if not var.get().strip():
+                messagebox.showwarning("Peringatan", "Mohon isi semua nilai mata pelajaran terlebih dahulu!")
+        return
 if __name__ == "__main__":
     root = tk.Tk()
     app = PrediksiProdiApp(root)
