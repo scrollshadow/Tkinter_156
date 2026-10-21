@@ -69,3 +69,14 @@ class PrediksiProdiApp:
             command=self.hitung_prediksi
         )
         btn_prediksi.pack(fill=tk.X, pady=(5, 15), ipady=8)
+
+        self.result_label = tk.Label(
+            main_frame, 
+            text="Hasil Prediksi Prodi akan muncul di sini", 
+            font=("Arial", 12, "bold"), 
+            bg="#eecf65", 
+            fg="#2c3e50", 
+            pady=12, 
+            relief=tk.GROOVE
+        )
+        self.result_label.pack(fill=tk.X)
