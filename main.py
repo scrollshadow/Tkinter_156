@@ -36,3 +36,9 @@ class PrediksiProdiApp:
             pady=10
         )
         input_frame.pack(fill=tk.X, pady=(0, 15))
+
+        subjects = [
+            "Matematika", "Bahasa Indonesia", "Bahasa Inggris", 
+            "Fisika", "Kimia", "Biologi", 
+            "Ekonomi", "Geografi", "Sosiologi", "Informatika"
+        ]
