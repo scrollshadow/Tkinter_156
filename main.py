@@ -16,3 +16,12 @@ class PrediksiProdiApp:
     def create_widgets(self):
         main_frame = tk.Frame(self.root, bg="#f4f6f9", padx=20, pady=20)
         main_frame.pack(fill=tk.BOTH, expand=True)
+
+        title_label = tk.Label(
+            main_frame, 
+            text="Aplikasi Prediksi Prodi Pilihan", 
+            font=("Arial", 16, "bold"), 
+            bg="#f4f6f9", 
+            fg="#2c3e50"
+        )
+        title_label.pack(pady=(0, 15))
