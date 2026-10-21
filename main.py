@@ -42,3 +42,16 @@ class PrediksiProdiApp:
             "Fisika", "Kimia", "Biologi", 
             "Ekonomi", "Geografi", "Sosiologi", "Informatika"
         ]
+
+        for i, subj in enumerate(subjects):
+            row_frame = tk.Frame(input_frame, bg="#f4f6f9")
+            row_frame.pack(fill=tk.X, pady=4)
+
+            lbl = tk.Label(row_frame, text=f"{i+1}. {subj}:", font=("Arial", 10), bg="#f4f6f9", anchor="w", width=20)
+            lbl.pack(side=tk.LEFT)
+
+            var = tk.StringVar()
+            self.entry_vars.append(var)
+
+            entry = tk.Entry(row_frame, textvariable=var, font=("Arial", 10), width=15, justify="center")
+            entry.pack(side=tk.RIGHT)
