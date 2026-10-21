@@ -8,3 +8,11 @@ class PrediksiProdiApp:
         self.root.geometry("520x680")
         self.root.config(bg="#f4f6f9")
         self.root.resizable(False, False)
+
+        self.entry_vars = []
+
+        self.create_widgets()
+
+    def create_widgets(self):
+        main_frame = tk.Frame(self.root, bg="#f4f6f9", padx=20, pady=20)
+        main_frame.pack(fill=tk.BOTH, expand=True)
