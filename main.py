@@ -55,3 +55,17 @@ class PrediksiProdiApp:
 
             entry = tk.Entry(row_frame, textvariable=var, font=("Arial", 10), width=15, justify="center")
             entry.pack(side=tk.RIGHT)
+
+            btn_prediksi = tk.Button(
+            main_frame, 
+            text="Hasil Prediksi", 
+            font=("Arial", 11, "bold"), 
+            bg="#2980b9", 
+            fg="white", 
+            activebackground="#1abc9c", 
+            activeforeground="white", 
+            relief=tk.RAISED, 
+            cursor="hand2", 
+            command=self.hitung_prediksi
+        )
+        btn_prediksi.pack(fill=tk.X, pady=(5, 15), ipady=8)
