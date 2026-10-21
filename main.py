@@ -95,6 +95,10 @@ class PrediksiProdiApp:
             fg="white"
         )
 
+        for var in self.entry_vars:
+            if not var.get().strip():
+                messagebox.showwarning("Peringatan", "Mohon isi semua nilai mata pelajaran terlebih dahulu!")
+        return
 if __name__ == "__main__":
     root = tk.Tk()
     app = PrediksiProdiApp(root)
