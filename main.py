@@ -80,3 +80,11 @@ class PrediksiProdiApp:
             relief=tk.GROOVE
         )
         self.result_label.pack(fill=tk.X)
+
+
+    def hitung_prediksi(self):
+    for var in self.entry_vars:
+        if not var.get().strip():
+            messagebox.showwarning("Peringatan", "Mohon isi semua nilai mata pelajaran terlebih dahulu!")
+            return
+    prodi_hasil = "Teknologi Informasi"
