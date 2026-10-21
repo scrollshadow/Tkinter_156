@@ -88,3 +88,9 @@ class PrediksiProdiApp:
             messagebox.showwarning("Peringatan", "Mohon isi semua nilai mata pelajaran terlebih dahulu!")
             return
     prodi_hasil = "Teknologi Informasi"
+    
+    self.result_label.config(
+            text=f"Prodi Pilihan Anda: {prodi_hasil}", 
+            bg="#2ecc71", 
+            fg="white"
+        )
